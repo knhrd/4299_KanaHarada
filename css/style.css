@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url('mobile.css')(max-width: 700px);
 
 
 html{
@@ -7,40 +6,69 @@ html{
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.7;
     color: #707070;
     background-color: #ffeeee;
-    margin: auto;
+    border-bottom: 2px solid #707070;
 }
 
 /*header*/
 header{
-    padding: 0px 0px 0px 0px;
     background-color: #E2DCE3;
-    width: 100%;
+    width: 100vw;
     height: 80px;
-    margin: 0% 0% 0% 0%;
     position: fixed;
-    top: 0;
-    z-index: 10;
+    top: 0px;
+    z-index: 10px;
 }
-.logo{
+.headerlogo{
     width: 80px;
     margin-left: 0px;
     width: 80px;
     height: 80px;
     float: left;
 }
-h1{
+h1.header{
     font-size: xx-small;
     font-family: 'Open Sans Condensed', sans-serif;
     margin-left: 40px;
     line-height: 80px;
 }
 
+.btn-menu{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    border:1px solid rgba(230, 213, 226, 0.705);
+    color: var(--white);
+    padding: .5rem 1rem;
+}
+.main-nav{
+    background: rgba(228, 212, 224, 0.5);
+    width: 0%;
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    right: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+.main-nav li{
+    text-align: center;
+    margin: 2rem 0;
+}
+.main-nav a{
+    display: block;
+}
+.main-nav.open-menu{
+    width: 30%;
+    height: 1000%;
+}
+
 /*main*/
-main {
-    margin: 0px 0px;
+main{
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2{
@@ -48,15 +76,20 @@ h2{
     font-family: 'Open Sans Condensed', sans-serif;
     margin-top: 50vh;
     width: 100vw;
-    height: 300px;
+    height: 400px;
     text-align: center;
     background-color: #ffeeee;
-    background-size: 100vh;
+    background-size: 100vh 680px;
+    border-bottom: 2px solid #E2DCE3;
 }
 h3{
     font-family: 'Sofia', cursive;
     font-size: xx-large;
     padding: 50px 30px 0px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 60%;
 }
 p{
     font-size: larger;
@@ -66,15 +99,224 @@ p{
 /*About me*/
 div.about{
     background-color: #fff7f7;
-    background-position: inherit;
+    background-position: top center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
     width: 100vw;
     height: 680px;
+    border-bottom: 2px solid #E2DCE3;
 }
 ul.about{
     list-style-type: none;
     line-height: 50px;
-    text-align: justify;
+    list-style-position: outside;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 55%;
 }
 p.coment{
     text-align: center;
+    margin-top: 100px;
+}
+
+/*skill*/
+div.skill{
+    background-color: #fff7f7;
+    background-position: top center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 680px;
+    border-bottom: 2px solid #E2DCE3;
+    }
+ul.skill{
+    list-style-type: square;
+    line-height: 100px;
+    list-style-position: inside;
+    font-size: x-large;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 55%;
+}
+
+/*like*/
+div.like{
+    background-color: #fff7f7;
+    background-position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 100vw;
+    height: 680px;
+    border-bottom: 2px solid #E2DCE3;
+}
+div.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.cafe{
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #E2DCE3;
+    background-position: center;
+    height: 250px;
+    width: 80%;
+    text-align: center;
+}
+img.cafe{
+    width: 100%;
+    height: 170px;
+    text-align: center;
+} 
+div.cooking{
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #E2DCE3;
+    background-position: center;
+    height: 250px;
+    width: 80%;
+    text-align: center;
+}
+img.cooking{
+    width: 100%;
+    height: 170px;
+    text-align: center;
+}
+div.izakaya{
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+    margin: 10px ;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #E2DCE3;
+    background-position: center;
+    height: 250px;
+    width: 80%;
+    text-align: center;
+}
+img.izakaya{
+    width: 100%;
+    height: 170px;
+    text-align: center;
+}
+div.live{
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #E2DCE3;
+    background-position: center;
+    height: 250px;
+    width: 80%;
+    text-align: center;
+}
+img.live{
+    width: 100%;
+    height: 170px;
+    text-align: center;
+}
+img:hover{
+    animation: hover-flash 1s;
+}
+@keyframes hover-flash {
+    0%{
+        opacity: .8;
+    }
+    100%{
+
+        opacity: 1;
+    }
+}
+
+/*contact*/
+div.contact{
+    background-color: #fff7f7;
+    background-position: top;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100vw;
+    height: 680px;
+    border-bottom: 2px solid #E2DCE3;
+}
+form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 55%;
+}
+label{
+    margin-bottom: 10px;
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    background: rgba(255,255,255,.5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+}
+input[type="text"]
+input[type="email"]{
+    width: 80%;
+}
+textarea{
+    width: 80%;
+    height: 20em;
+}
+input[type="sudmit"]{
+    border:none;
+    cursor: pointer;
+    line-height: 1;
+}
+/* .google{
+    overflow: hidden;
+} */
+
+/*footer*/
+footer{
+    background-color: #E2DCE3;
+    width: 100vw;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    background-position: top;
+    flex: 1;
+}
+.footerlogo{
+    width: 80px;
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+h1.footer{
+    font-size: xx-small;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: 40px;
+    line-height: 80px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
 }

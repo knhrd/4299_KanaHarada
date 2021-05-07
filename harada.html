@@ -12,14 +12,22 @@
     </head>
     <body>
         <header>
-            <img class=logo src="pic\logo.png" alt="logo"> 
-            <h1>KanaHarada</h1> 
+            <img class="headerlogo" src="pic\logo.png" alt="headerlogo"> 
+            <h1 class="header">KanaHarada</h1> 
+            <nav>
+                <button class="btn-menu">Menu</button>
+                <ul class="main-nav">
+                  <li><a href="#about">About me</a></li>
+                  <li><a href="#skill">Skill</a></li>
+                  <li><a href="#like">Like</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-
         <h2>Kana Harada</h2>
 
         <main>
-        <div class="about">
+        <div class="about" id="about">
         <h3>About me</h3>
         <ul class="about">
             <li>Name: 原田佳奈</li>
@@ -31,38 +39,60 @@
             <li>Mail: kana.harada@force-corp.co.jp</li>
         </ul>
         <p class="coment">亜細亜大学経営学部経営学科卒業後フォース株式会社に入社。 
-            社会人1年目の23歳</p></div>
+            社会人1年目の23歳。</p></div>
 
-        <h3>Skill(in Stady)</h3>
-        <ul>
+        <div class="skill" id="skill">
+        <h3>Skill (in Stady)</h3>
+        <ul class="skill">
             <li>MOS</li>
             <li>SQL</li>
             <li>HTML</li>
             <li>Linux</li>
-        </ul>
+        </ul></div>
 
+        <div class=like id="like">
         <h3>Like</h3>
-        <p>Café</p>
-        <img src="pic\cafe.jpg" alt="cafe">
-        <p>Cooking</p>
-        <img src="pic\cook.jpg" alt="cook">
-        <p>Izakaya</p>
-        <img src="pic\izakaya.jpg" alt="Izakaya">
-        <p>Live</p>
-        <img src="pic\live.jpg" alt="Live">
+        <div class="container">
+        <div class="cafe">
+            <p>Café</p>
+            <img class="cafe" src="pic\cafe.jpg" alt="cafe" >
+        </div>
+        <div class="cooking">
+            <p>Cooking</p>
+            <img class="cooking" src="pic\cook.jpg" alt="cooking"></div>
+        <div class="izakaya">
+            <p>Izakaya</p>
+            <img class="izakaya" src="pic\izakaya.jpg" alt="Izakaya"></div>
+        <div class="live">
+            <p>Live</p>
+            <img class="live" src="pic\live.jpg" alt="Live"></div>
+        </div></div>
 
+        <div class="contact" id="contact">
         <h3>Contact</h3>    
         <form action="example.pop" method="POST" name="contact-form">
-            your name:<input type="text" placeholder="名前">
-            your mailaddress:<input type="email" placeholder="アドレス">
-            content:<textarea name="massage" placeholder="メッセージを入力"></textarea>
-            <input type="submit" value="送信">
-        </form>
-    </main>
-
-    <footer>
-        <img src="pic\logo.png" alt="logo2">
-        <h1>Kana Harada</h1>
-    </footer>
+            <div>
+                <label for="name">your Name</label>
+                <input type="text" required id="name" name="your-name" placeholder="お名前">
+            </div>
+            <div>
+                <label for="email">your mailaddress</label>
+                <input type="email" id="email" name="your-email" placeholder="メールアドレス">
+            </div>
+            <div>
+                <label for="massage">content</label>
+                <textarea id="massage" name="your-message" placeholder="メッセージを入力"></textarea>
+            </div>
+            <input type="submit" class="button" value="送信">
+        </form></div>
+        <!-- <div class="google form"> -->
+        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYkXTovCz8vbiSqkY6X9uZv7s7a6mtX2A4VvzdnKmM7hjjfA/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe> -->
+        <!-- </div> -->
+        </main>
+        <footer>
+            <img class="footerlogo" src="pic\logo.png" alt="footerlogo">
+            <h1 class="footer">Kana Harada</h1>
+         </footer>
+         <script src="js/script.js"></script>
     </body>
 </html>
