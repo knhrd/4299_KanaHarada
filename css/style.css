@@ -18,7 +18,7 @@ header{
     height: 80px;
     position: fixed;
     top: 0px;
-    z-index: 10px;
+    z-index: 10;
 }
 .headerlogo{
     width: 80px;
@@ -52,6 +52,11 @@ h1.header{
     overflow: hidden;
     transition: .5s;
 }
+h4{
+    text-align: center;
+    margin: 20px;
+    font-size: x-large;
+}
 .main-nav li{
     text-align: center;
     margin: 2rem 0;
@@ -60,7 +65,7 @@ h1.header{
     display: block;
 }
 .main-nav.open-menu{
-    width: 30%;
+    width: 15%;
     height: 1000%;
 }
 
@@ -146,7 +151,6 @@ ul.skill{
 /*like*/
 div.like{
     background-color: #fff7f7;
-    background-position: initial;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0%;
@@ -155,18 +159,19 @@ div.like{
     height: 680px;
     border-bottom: 2px solid #E2DCE3;
 }
-div.container{
+div.likepic{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 50%;
-    height: 50%;
+    grid-template-rows: 1fr 1fr;
+    width: 60%;
+    height: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 div.cafe{
     grid-template-columns: 1fr 1fr;
     padding: 0px;
-    margin: 20px;
+    margin: 10px;
     margin-left: auto;
     margin-right: auto; 
     background-color: #E2DCE3;
@@ -180,12 +185,38 @@ img.cafe{
     height: 170px;
     text-align: center;
 } 
+.sabcafe{
+    background-color: rgba(230, 213, 226, 0.705);
+    background-position: center;
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    gap: 10px;
+    grid-template-rows: 250px 250px 250px;
+    overflow: hidden;
+    width: 0%;
+    position: absolute;
+    z-index: 1;
+}
+img.sabcafe{
+    height: 250px;
+    width: 250px;
+}
+.sabcafe.open-sabcafe{
+    width: 830px;
+    height: 570px;
+    margin-left: 24%;
+    margin-top: 10px;
+    transition: 3s;
+}
+.sabcafe.close-sabcafe{
+    width: 0%;
+    transition: 0s;
+}
 div.cooking{
     grid-template-columns: 1fr 1fr;
     padding: 0px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto; 
+    margin: 10px 0px;
     background-color: #E2DCE3;
     background-position: center;
     height: 250px;
@@ -197,10 +228,39 @@ img.cooking{
     height: 170px;
     text-align: center;
 }
+.sabcooking{
+    background-color: rgba(230, 213, 226, 0.705);
+    background-position: center;
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    gap: 10px;
+    grid-template-rows: 250px 250px 250px;
+    overflow: hidden;
+    width: 0%;
+    position: absolute;
+    z-index: 1;
+}
+img.sabcooking{
+    height: 250px;
+    width: 250px;
+}
+.sabcooking.open-sabcooking{
+    width: 830px;
+    height: 570px;
+    margin-left: 24%;
+    margin-top: 10px;
+    transition: 3s;
+}
+.sabcooking.close-sabcooking{
+    width: 0%;
+    transition: 0s;
+}  
+
 div.izakaya{
     grid-template-columns: 1fr 1fr;
     padding: 0px;
-    margin: 10px ;
+    margin: 0px 10px;
     margin-left: auto;
     margin-right: auto; 
     background-color: #E2DCE3;
@@ -213,13 +273,39 @@ img.izakaya{
     width: 100%;
     height: 170px;
     text-align: center;
+} 
+ .sabizakaya{
+    background-color: rgba(230, 213, 226, 0.705);
+    background-position: center;
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    gap: 10px;
+    grid-template-rows: 250px 250px 250px;
+    overflow: hidden;
+    width: 0%;
+    position: absolute;
+    z-index: 1;
+}
+img.sabizakaya{
+    height: 250px;
+    width: 250px;
+}
+.sabizakaya.open-sabizakaya{
+    width: 830px;
+    height: 570px;
+    margin-left: 24%;
+    margin-top: 10px;
+    transition: 3s;
+} 
+.sabizakaya.close-sabizakaya{
+    width: 0%;
+    transition: 0s;
 }
 div.live{
     grid-template-columns: 1fr 1fr;
     padding: 0px;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto; 
+    margin: 0px;
     background-color: #E2DCE3;
     background-position: center;
     height: 250px;
@@ -231,8 +317,36 @@ img.live{
     height: 170px;
     text-align: center;
 }
+.sablive{
+    background-color: rgba(230, 213, 226, 0.705);
+    background-position: center;
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    gap: 10px;
+    grid-template-rows: 250px 250px 250px;
+    overflow: hidden;
+    width: 0%;
+    position: absolute;
+    z-index: 1;
+}
+img.sablive{
+    height: 250px;
+    width: 250px;
+}
+ .sablive.open-sablive{
+    width: 830px;
+    height: 570px;
+    margin-left: 24%;
+    margin-top: 10px;
+    transition: 3s;
+}  
+.sablive.close-sablive{
+    width: 0%;
+    transition: 0s;
+}
 img:hover{
-    animation: hover-flash 1s;
+    animation: hover-flash 3s;
 }
 @keyframes hover-flash {
     0%{
@@ -247,11 +361,10 @@ img:hover{
 /*contact*/
 div.contact{
     background-color: #fff7f7;
-    background-position: top;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
     width: 100vw;
     height: 680px;
     border-bottom: 2px solid #E2DCE3;
